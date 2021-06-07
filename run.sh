@@ -1,3 +1,6 @@
 #!/bin/bash
 
-deno run --allow-net --allow-read --lock=lock.json mod.ts
+docker run --rm -d \
+           --name nasa-deno \
+           -p 8000:8000 \
+           chamuelm/nasa-deno
